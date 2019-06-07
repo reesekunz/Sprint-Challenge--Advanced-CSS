@@ -1,8 +1,23 @@
+
 // Home Content
 
 .home {
 
   .intro {
+
+    .toppicture {
+        width: 100%;
+    }
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      margin: 5%;
+    }
+  
 
     h2 {
       padding: 15px;
@@ -11,13 +26,34 @@
     p {
       padding:0 15px;
     }
-  
-  }
 
+  }
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    .responsiveimage();
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+    .blast {
+      @media @mobile {
+        height: 300px;
+        width: 100%;
+      }
+    }
+      .sky {
+          @media @mobile {display: none;}
+
+      }
+
+      .launch {
+        @media @mobile {display: none;}
+
+      }
 
     img {
       width: 28%;
@@ -28,6 +64,16 @@
   }
 
   .visit-planets {
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      margin: 5%
+    }
+  
     padding: 15px;
 
     h3 {
@@ -46,8 +92,22 @@
     display: flex;
     justify-content: center;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 100%
+
+    }
+    
     .walk-text {
       width: 50%;
+
+      @media @mobile {
+        width: 100%
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -57,13 +117,40 @@
         margin-bottom: 26px;
       }
 
-      .btn {
-      }
+      .btn 
+      {
+      .button(white,black); 
+
+    &:hover {color:black;
+      background-color: white;
+    }
+    @media @mobile{
+      padding: 15px 30px;
+      width: 100%;
+      border-radius: 5px;
+      border: 10px;
+
+      width: 85%
+
+
+  }
+
+    } 
+    
+    
+    }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @mobile {
+        display:flex;
+        justify-content: center;
+        height: 300px;
+        width: 100%;
+        margin-left: 0%
+      }
       
       img {
         width: 100%;
@@ -72,4 +159,4 @@
       }
     }
   }
-}// home
+
